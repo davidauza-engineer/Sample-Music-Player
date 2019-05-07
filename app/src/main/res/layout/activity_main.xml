@@ -87,9 +87,9 @@
         android:id="@+id/song_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@id/seek_bar"
+        android:layout_above="@id/timer_left"
         android:layout_centerHorizontal="true"
-        android:textAppearance="?android:textAppearanceMedium"
-        tools:text="Song Name" />
+        android:text="@string/main_song_name"
+        android:textAppearance="?android:textAppearanceMedium" />
 
 </RelativeLayout>
