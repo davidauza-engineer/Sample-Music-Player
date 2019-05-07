@@ -8,4 +8,28 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!-- Style for headers in the main layout -->
+    <style name="MainHeaders">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:textSize">35sp</item>
+    </style>
+
+    <!-- Style for buttons in the main layout -->
+    <style name="MainButtons">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Style for timers in the main layout -->
+    <style name="MainTimers">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAppearance">?android:textAppearanceSmall</item>,
+        <item name="android:layout_above">@id/seek_bar</item>
+    </style>
+
 </resources>

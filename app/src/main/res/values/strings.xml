@@ -1,3 +1,10 @@
 <resources>
+
+    <!-- Main layout Strings Start -->
     <string name="app_name">Sample Music Player</string>
+    <string name="main_header_two">David Auza</string>
+    <string name="main_button_back"><![CDATA[<<]]></string>
+    <string name="main_button_pause"><![CDATA[||]]></string>
+    <string name="main_button_play"><![CDATA[>]]></string>
+    <string name="main_button_forward"><![CDATA[>>]]></string>
 </resources>
