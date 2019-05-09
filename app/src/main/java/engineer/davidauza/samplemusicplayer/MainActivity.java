@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Keeps track if the media player has already started to play a song.
      */
-    private static boolean hasStarted;
+    private static boolean mHasStarted;
     /**
      * This button jumps 5 seconds back of the media player progress.
      */
@@ -127,9 +127,9 @@ public class MainActivity extends AppCompatActivity {
                 mStartingPosition = mMediaPlayer.getCurrentPosition();
                 mFinalTime = mMediaPlayer.getDuration();
 
-                if (!MainActivity.hasStarted) {
+                if (!MainActivity.mHasStarted) {
                     mSeekBar.setMax((int) mFinalTime);
-                    MainActivity.hasStarted = true;
+                    MainActivity.mHasStarted = true;
                 }
 
                 setTimer(mStartingPosition, mLeftTimerTextView);
