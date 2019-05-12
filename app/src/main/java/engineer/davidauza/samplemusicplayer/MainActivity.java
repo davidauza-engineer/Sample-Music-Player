@@ -84,23 +84,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Find Buttons
-        mBackButton = findViewById(R.id.back_button);
-        mPauseButton = findViewById(R.id.pause_button);
-        mPauseButton.setEnabled(false);
-        mPlayButton = findViewById(R.id.play_button);
-        mForwardButton = findViewById(R.id.forward_button);
+        setUpButtons();
 
-        // Find TextView timers
-        mLeftTimerTextView = findViewById(R.id.timer_left);
-        mRightTimerTextView = findViewById(R.id.timer_right);
+        setUpTimers();
 
-        // Set up MediaPlayer
-        mMediaPlayer = MediaPlayer.create(this, R.raw.colombia_anthem);
+        setUpMediaPlayer();
 
-        // Set up SeekBar
-        mSeekBar = findViewById(R.id.seek_bar);
-        mSeekBar.setClickable(false);
+        setUpSeekBar();
 
         setPlayButton();
 
@@ -109,6 +99,51 @@ public class MainActivity extends AppCompatActivity {
         setBackButton();
 
         setForwardButton();
+    }
+
+    /**
+     * This method configures the SeekBar.
+     */
+    private void setUpSeekBar() {
+        // Set up SeekBar
+        mSeekBar = findViewById(R.id.seek_bar);
+        mSeekBar.setClickable(false);
+    }
+
+    /**
+     * This method configures the Media Player.
+     */
+    private void setUpMediaPlayer() {
+        // Set up MediaPlayer
+        mMediaPlayer = MediaPlayer.create(this, R.raw.colombia_anthem);
+        mMediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                Toast.makeText(MainActivity.this, getString(R.string.main_toast_done),
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    /**
+     * This method sets up the timers of the UI.
+     */
+    private void setUpTimers() {
+        // Find TextView timers
+        mLeftTimerTextView = findViewById(R.id.timer_left);
+        mRightTimerTextView = findViewById(R.id.timer_right);
+    }
+
+    /**
+     * This method sets up the buttons of the UI.
+     */
+    private void setUpButtons() {
+        // Find Buttons
+        mBackButton = findViewById(R.id.back_button);
+        mPauseButton = findViewById(R.id.pause_button);
+        mPauseButton.setEnabled(false);
+        mPlayButton = findViewById(R.id.play_button);
+        mForwardButton = findViewById(R.id.forward_button);
     }
 
     /**
