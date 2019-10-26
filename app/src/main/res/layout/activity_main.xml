@@ -41,25 +41,21 @@
         <Button
             android:id="@+id/back_button"
             style="@style/MainButtons"
-            android:layout_weight="1"
             android:text="@string/main_button_back" />
 
         <Button
             android:id="@+id/pause_button"
             style="@style/MainButtons"
-            android:layout_weight="1"
             android:text="@string/main_button_pause" />
 
         <Button
             android:id="@+id/play_button"
             style="@style/MainButtons"
-            android:layout_weight="1"
             android:text="@string/main_button_play" />
 
         <Button
             android:id="@+id/forward_button"
             style="@style/MainButtons"
-            android:layout_weight="1"
             android:text="@string/main_button_forward" />
 
     </LinearLayout>
