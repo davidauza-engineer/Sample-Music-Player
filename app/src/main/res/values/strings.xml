@@ -16,4 +16,5 @@
     <string name="main_toast_forward_not_possible">Can\'t jump forward right now</string>
     <string name="main_timer">%d min, %d sec</string>
     <string name="main_toast_done">I\'m done!</string>
+    <string name="main_content_description">Colombia\'s flag</string>
 </resources>

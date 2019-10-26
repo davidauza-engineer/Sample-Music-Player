@@ -28,42 +28,47 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/header_two"
         android:layout_centerHorizontal="true"
+        android:contentDescription="@string/main_content_description"
         android:src="@drawable/colombia_flag" />
 
-    <Button
-        android:id="@+id/back_button"
-        style="@style/MainButtons"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:text="@string/main_button_back" />
+    <LinearLayout
+        android:id="@+id/ly_button_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/pause_button"
-        style="@style/MainButtons"
-        android:layout_alignStart="@id/song_image"
-        android:layout_alignLeft="@id/song_image"
-        android:text="@string/main_button_pause" />
+        <Button
+            android:id="@+id/back_button"
+            style="@style/MainButtons"
+            android:layout_weight="1"
+            android:text="@string/main_button_back" />
 
-    <Button
-        android:id="@+id/play_button"
-        style="@style/MainButtons"
-        android:layout_alignEnd="@id/song_image"
-        android:layout_alignRight="@id/song_image"
-        android:text="@string/main_button_play" />
+        <Button
+            android:id="@+id/pause_button"
+            style="@style/MainButtons"
+            android:layout_weight="1"
+            android:text="@string/main_button_pause" />
 
-    <Button
-        android:id="@+id/forward_button"
-        style="@style/MainButtons"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:text="@string/main_button_forward" />
+        <Button
+            android:id="@+id/play_button"
+            style="@style/MainButtons"
+            android:layout_weight="1"
+            android:text="@string/main_button_play" />
 
+        <Button
+            android:id="@+id/forward_button"
+            style="@style/MainButtons"
+            android:layout_weight="1"
+            android:text="@string/main_button_forward" />
+
+    </LinearLayout>
 
     <SeekBar
         android:id="@+id/seek_bar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@id/forward_button"
+        android:layout_above="@id/ly_button_container"
         android:layout_alignStart="@id/header"
         android:layout_alignLeft="@id/header"
         android:layout_alignEnd="@id/header"
